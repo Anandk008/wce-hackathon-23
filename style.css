@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+}
+
+#grid {
+  height: 100vh;
+}
+
+#left {
+  background: #2f66f0;
+}
+
+#right {
+  background: #81c3f7;
+  border: 3rem solid rgb(0 165 207 / 10%);
+}
+
+/* the magic */
+#grid {
+  transition: 300ms;
+  display: grid;
+  grid-template-columns: 48px auto;
+}
+
+#grid:has(#left:hover) {
+  grid-template-columns: 10% auto;
+  transition: 0.5s ease-in-out;
+}
+/* magic + CSS variable */
+#grid {
+  transition: 300ms;
+  display: grid;
+  grid-template-columns: var(--left, 48px) auto;
+}
+
+#grid:has(#left:hover) {
+  --left: 30%;
+}
+#svg {
+    height: 40rem;
+    /* align-self: flex-end; */
+    float: right;
+    display: block;
+}
+.home{
+    height: 100vh;
+    display: -ms-flexbox;
+    display: grid;
+    
+}
+.data{
+    display: block;
+    float: left;
+    align-self: center;
+}

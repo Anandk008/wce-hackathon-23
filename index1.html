@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/49ae0caa8c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="index.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js"
+      integrity="sha512-HDCfX3BneBQMfloBfluMQe6yio+OfXnbKAbI0SnfcZ4YfZL670nc52Aue1bBhgXa+QdWsBdhMVR2hYROljf+Fg=="
+      crossorigin="anonymous"
+    ></script>
+    <title>WCE Hackathon 2023 | WCE ACM</title>
+  </head>
+  <body>
+    <div id="grid">
+      <div class="nav-bar" id="left">
+        <ul>
+          <li class="menu-heading">WCE ACM</li>
+
+          <li id="menu-item4">
+            <a data-toggle="tab" href="#landing"
+              ><i class="fa fa-home fa-lg"></i>Home</a
+            >
+          </li>
+          <li id="menu-item3">
+            <a data-toggle="tab" href="#analytics"
+              ><i class="fa fa-question"></i> FAQ</a
+            >
+          </li>
+          <!-- <p>This is nav</p> -->
+        </ul>
+      </div>
+      <div id="right">
+        <div class="home">
+          <div class="data">
+            <h2>This is home</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              facilis voluptates eveniet in iste et totam odio doloribus
+              excepturi dignissimos.
+            </p>
+          </div>
+          <div id="svg"></div>
+        </div>
+        <div class="faq">
+          <p>This is faq</p>
+        </div>
+        <div class="problem">
+          <p>This is problem</p>
+        </div>
+        <div class="prizes">
+          <p>This is prizes</p>
+        </div>
+        <div class="sponcers">
+          <p>This is Sponcers</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>This is footer</p>
+    </footer>
+  </body>
+
+  <script>
+    var animation = bodymovin.loadAnimation({
+      // animationData: { /* ... */ },
+      container: document.getElementById("svg"), // required
+      path: "lottie.json", // required
+      renderer: "svg", // required
+      loop: true, // optional
+      autoplay: true, // optional
+      name: "Demo Animation", // optional
+    });
+  </script>
+</html>
