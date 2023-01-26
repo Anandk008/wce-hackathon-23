@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+}
+
+#grid {
+  transition: 0.5s;
+  display: grid;
+  grid-template-columns: auto;
+}
+#top {
+  align-items: top;
+}
+#grid:has(#top:hover) {
+  grid-template-rows: 10% auto;
+  transition: 0.5s ease-in-out;
+}
+
+/* magic + CSS variable */
+#grid {
+  transition: 0.5s;
+  display: grid;
+  grid-template-rows: var(--top, 40px) auto;
+  grid-template-columns: 100%;
+}
+
+#grid:has(#top:hover) {
+  --top: 10%;
+}
+#top {
+  background: #2f66f0;
+}
+
+#right {
+  background: #81c3f7;
+  border: 1rem solid rgb(0 165 207 / 10%);
+}
+
+.home {
+  grid-template-columns: auto;
+  gap: 100px;
+}
+
+#svg {
+  height: 30rem;
+  display: block;
+}
+.data {
+  display: inline-flexbox;
+  align-self: center;
+  justify-content: center;
+}
+.data > h2 {
+  font-size: 2rem;
+}
+/* Nav Bar */
+#top .nav-bar {
+  justify-content: center;
+  text-decoration: none;
+  display: flex;
+}
+#top .nav-bar ul li a {
+  display: flex;
+  text-decoration: none;
+}
+#top .nav-bar ul li a > i {
+  color: black;
+  align-self: flex-start;
+}
+#top .nav-bar ul {
+  list-style-type: none;
+}
+#top .typing-container {
+  /* display: flex; */
+  justify-content: center;
+  /* align-items: center; */
+}

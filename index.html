@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link id="css" rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="mobile.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 1100px)"
+      href="widescreen.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/49ae0caa8c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="index.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js"
+      integrity="sha512-HDCfX3BneBQMfloBfluMQe6yio+OfXnbKAbI0SnfcZ4YfZL670nc52Aue1bBhgXa+QdWsBdhMVR2hYROljf+Fg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+    <title>WCE Hackathon 2023 | WCE ACM</title>
+  </head>
+  <body>
+    <div id="grid">
+      <!-- Nav Bar Normal Screen -->
+      <div class="nav-bar" id="left">
+        <ul>
+          <a class="cta" href="#">
+            <li class="menu-heading">WCE ACM</li>
+          </a>
+          <li>
+            <a class="cta">
+              <i class="fa fa-home fa-lg"></i>
+              <span class="hover-underline-animation">
+                Home
+              </span>
+            </a>
+          </li>
+          <li ><div class="break"></div></li>
+          <li >
+            <a class="cta">
+              <i class="fa fa-question "></i>
+              <span class="hover-underline-animation">
+                FAQ
+              </span>
+            </a>
+          </li>
+
+          <li >
+            <a class="cta">
+              <i class="fa fa-trophy fa-lg"></i>
+              <span class="hover-underline-animation">
+                Prizes
+              </span>
+            </a>
+          </li>
+          <!-- <p>This is nav</p> -->
+        </ul>
+      </div>
+      <!-- Nav Bar Mobile Screen -->
+
+      <div class="nav-bar" id="top">
+        <ul>
+          <a class="cta" href="#">
+            <li class="menu-heading">WCE ACM</li>
+          </a>
+          <li>
+            <a class="cta">
+              <i class="fa fa-home fa-lg"></i>
+              <span class="hover-underline-animation">
+                Home
+              </span>
+            </a>
+          </li>
+
+          <li >
+            <a class="cta">
+              <i class="fa fa-question "></i>
+              <span class="hover-underline-animation">
+                FAQ
+              </span>
+            </a>
+          </li>
+
+          <li >
+            <a class="cta">
+              <i class="fa fa-trophy fa-lg"></i>
+              <span class="hover-underline-animation">
+                Prizes
+              </span>
+            </a>
+          </li>
+          <!-- <p>This is nav</p> -->
+        </ul>
+      </div>
+
+
+
+      <!-- Right Part -->
+      <div id="right">
+        <div class="home">
+          <div class="data">
+            <h2>
+              WCE <br />
+              HACKATHON'23
+            </h2>
+            <!-- to add js type effect -->
+            <div class="typing-container">
+              <span id="sentence" class="sentence">Here, take this </span>
+              <span id="feature-text"></span>
+              <span class="input-cursor"></span>
+            </div>
+
+            <div class="btn">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Consequuntur, impedit.
+            </div>
+          </div>
+          <div id="svg"></div>
+        </div>
+
+        <div id="hackathon">
+          <div class="text">
+            
+          </div>
+          <h1>What is Hackathon</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus, dolores dolore. Iste, aperiam in excepturi quidem
+            illum voluptatem corporis eligendi!
+          </p>
+          <div class="container">
+            <div class="loader"></div>
+            <div class="loader"></div>
+            <div class="loader"></div>
+          </div>
+          
+        </div>
+        <div class="faq">
+          <p>This is faq</p>
+        </div>
+        <div class="problem">
+          <p>This is problem</p>
+        </div>
+        <div class="prizes">
+          <p>This is prizes</p>
+        </div>
+        <div class="sponcers">
+          <p>This is Sponcers</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>This is footer</p>
+    </footer>
+  </body>
+
+  <script>
+    var animation = bodymovin.loadAnimation({
+      // animationData: { /* ... */ },
+      container: document.getElementById("svg"), // required
+      path: "lottie1.json", // required
+      renderer: "svg", // required
+      loop: true, // optional
+      autoplay: true, // optional
+      name: "Demo Animation", // optional
+    });
+
+    const css = document.getElementsByTagName("head");
+    const mobileSize = window.matchMedia("(min-width: 768px)");
+    const wideSize = window.matchMedia("(min-width: 1100px)");
+
+    const cssMobile = `<link rel="stylesheet"
+      href="widescreen.css> `;
+    const cssWide = `<link rel="stylesheet"
+      href="widescreen.css> `;
+    const cssNormal = `<link rel="stylesheet"
+      href="style.css>`;
+
+    if (mobileSize.matches) {
+      document.head.appendChild(cssMobile);
+      (css[0].innerHTML += cssMobile), console.log(cssMobile);
+    } else if (wideSize.matches) {
+      (document.innerHTML += cssWide), console.log(cssWide);
+    } else {
+      document.head.appendChild(cssNormal);
+    }
+  </script>
+</html>
